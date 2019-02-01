@@ -1,0 +1,233 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{deedy-resume-openfont}
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\namesection{William}{Yu}{\urlstyle{same}\url{https://github.com/willyiamyu} | \urlstyle{same}\url{http://williamjyu.com} \\
+\href{mailto:wy.williamyu@gmail.com}{wy.williamyu@gmail.com} | (408) 318-0349 | Irvine, California 92617}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{UC IRVINE}
+\descript{B.S. Applied Mathematics}
+\location{Expected June 2019 | Irvine, CA \\ GPA: 3.74 / 4.0}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Coursework}
+\subsection{Undergraduate} 
+Statistical Methods for Data Analysis \\
+Probability and Stochastic Processes \\
+Statistical Methods for Finance \\
+Data Structures and Algorithms  \\
+Linear Algebra \\
+Math for Finance \\ 
+Partial Differential Equations \\
+Numerical Analysis \\
+Linear Analysis \\
+Group Theory \\
+Database Management \\
+Calculus with Analytical Geometry \\
+Differential Equations \\
+Elementary Analysis
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Programming}
+Python • Java • SQL • MATLAB • R
+\subsection{Markup}
+{\LaTeX} • HTML • CSS
+\subsection{Technical}
+Docker • Vim • Git
+\subsection{Other}
+Chinese (Mandarin) • French
+\sectionsep
+
+
+\section{Additional}
+\subsection{UC Irvine}
+Dean's List: Winter 2018, Spring 2018, Fall 2019 \\
+Pi Mu Epsilon: Math Honors Society \\
+Math Honors
+\subsection{Other}
+GRE General: 326 / 340 
+\sectionsep
+
+\section{Interests}
+Basketball \\ Piano \\ Photography \\ Travel
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+
+\runsubsection{CloudMinds Technology}
+\descript{| Data Science Intern}
+\location{June 2018 – Sept 2018 | Irvine, CA}
+\sectionsep
+\begin{tightemize} 
+\item Classified 10000+ samples of raw audio data using k-means and t-SNE
+\item Created data parser and formatter to review deep-learning model
+\item Implemented dialogue framework with chatbot by utilizing Google's DialogFlow
+\end{tightemize}
+\sectionsep
+
+\runsubsection{CloudMinds Technology}
+\descript{| Software Developer Intern}
+\location{June 2017 – Sept 2017 | Santa Clara, CA}
+\begin{tightemize} 
+\item Developed Android app that implements CloudMind's speech-to-text function
+\item Integrated CloudMinds’ Speech Recognition and Google Cloud Speech API to record and submit audio
+\item Uploaded 6000+ audio waveforms onto AWS by utilizing external web service 
+\end{tightemize}
+\sectionsep
+
+\runsubsection{IBM}
+\descript{| Software Developer Intern}
+\location{June 2016 – Sept 2016 | Santa Clara, CA}
+\begin{tightemize} 
+\item Created Android app that allows users to track Pokemon Go locations in area 
+\item Stored 100+ Pokemon into IBM Cloudant and used data to make suggestions to user
+\item  Utilized Google Maps API and IBM Cloudant Geospatial to record user and Pokemon location
+\end{tightemize}
+\sectionsep
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     RESEARCH
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Research}
+\runsubsection{UC Irvine}
+\descript{| Research Assistant}
+\location{Sept 2018 - Present | Irvine, CA}
+\begin{tightemize} 
+\item Implementing deep learning to predict evolution trends based on historical data
+\item Comparing deep-learning methods to traditional regression methods such as ARMA models
+\item Researching the properties of wave propagation and how noise increases over longer distances of signal
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PROJECTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Projects}
+\runsubsection{Stock Predictor}
+\location{ Sept 2018 - Present}
+\begin{tightemize} 
+\item Use Python machine learning library keras to make predictions about stocks
+\item Fetches real-time stock quotes through Quandl API to use as training data
+\end{tightemize}
+\runsubsection{Personal Website}
+\location{ June 2018 - Present}
+\begin{tightemize} 
+\item Self-taught HTML and CSS to create interactive website
+\item Integrated Amazon Web Services to host website
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LEADERSHIP
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Leadership}
+\runsubsection{Alpha Kappa Psi}
+\descript{| Active Brother}
+\location{ June 2018- Present | Irvine, CA}
+\begin{tightemize} 
+\item Maintained pledge class’ account balance and provided weekly reports of expenses to the chapter
+\item Raised 3000 dollars (a 25\% increase from Fall 2017) within three weeks through fundraisers and corporate outreach
+\item Pitched 40 page business plan with market research, ROI analysis, mock-ups, marketing recommendations
+\end{tightemize}
+\sectionsep
+
+
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
